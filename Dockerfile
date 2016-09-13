@@ -13,9 +13,9 @@ RUN \
  unzip && \
  
  cd tmp && \
- wget -q http://downloads.rclone.org/rclone-${RCLONE_VERSION}-linux-${ARCH}.zip && \
- unzip /tmp/rclone-${RCLONE_VERSION}-linux-${ARCH}.zip && \
- mv /tmp/rclone-*-linux-${ARCH}/rclone /usr/bin && \
+ wget -q http://downloads.rclone.org/rclone-${RCLONE_VERSION}-linux-${RCLONE_ARCH}.zip && \
+ unzip /tmp/rclone-${RCLONE_VERSION}-linux-${RCLONE_ARCH}.zip && \
+ mv /tmp/rclone-*-linux-${RCLONE_ARCH}/rclone /usr/bin && \
  
 # cleanup
  apk cache clean && \
