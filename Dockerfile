@@ -20,8 +20,8 @@ RUN \
 # cleanup
  apk cache clean && \
  rm -rf \
-		/tmp/* \
-		/var/tmp/*
+	/tmp/* \
+	/var/tmp/*
 
 RUN unzip rclone-current-linux-amd64.zip
 
