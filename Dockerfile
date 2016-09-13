@@ -18,7 +18,6 @@ RUN \
  mv /tmp/rclone-*-linux-${RCLONE_ARCH}/rclone /usr/bin && \
  
 # cleanup
- apk cache clean && \
  rm -rf \
 	/tmp/* \
 	/var/tmp/*
