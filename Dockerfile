@@ -23,10 +23,6 @@ RUN \
 	/tmp/* \
 	/var/tmp/*
 
-RUN unzip rclone-current-linux-amd64.zip
-
-COPY /root /
-
 ENTRYPOINT ["/usr/bin/rclone"]
 
 VOLUME ["/config"]
