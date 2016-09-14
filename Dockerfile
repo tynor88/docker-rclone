@@ -17,6 +17,9 @@ RUN \
  unzip /tmp/rclone-${RCLONE_VERSION}-linux-${RCLONE_ARCH}.zip && \
  mv /tmp/rclone-*-linux-${RCLONE_ARCH}/rclone /usr/bin && \
  
+ apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/community \
+	shadow && \
+ 
 # cleanup
  rm -rf \
 	/tmp/* \
