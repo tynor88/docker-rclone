@@ -22,6 +22,20 @@ RUN \
 	/tmp/* \
 	/var/tmp/*
 
+# create abc user
+RUN \
+	groupmod -g 1000 users && \
+	useradd -u 911 -U -d /config -s /bin/false abc && \
+	usermod -G users abc && \
+
+# create some folders
+	mkdir -p /config
+
+# add local files
+COPY root/ /
+
+USER abc
+
 ENTRYPOINT ["/usr/bin/rclone"]
 
 VOLUME ["/config"]
