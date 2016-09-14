@@ -5,9 +5,14 @@ MAINTAINER tynor88 <tynor@hotmail.com>
 ENV RCLONE_VERSION="current"
 ENV RCLONE_ARCH="amd64"
 
-# install build packages
+# install packages
 RUN \
  apk update && \
+ apk add --no-cache \
+ ca-certificates
+
+# install build packages
+RUN \
  apk add --no-cache --virtual=build-dependencies \
  wget \
  unzip && \
@@ -25,7 +30,8 @@ RUN \
 	build-dependencies && \
  rm -rf \
 	/tmp/* \
-	/var/tmp/*
+	/var/tmp/* \
+	/var/cache/apk/*
 
 # create abc user
 RUN \
