@@ -5,10 +5,10 @@ MAINTAINER tynor88 <tynor@hotmail.com>
 ENV RCLONE_VERSION="current"
 ENV RCLONE_ARCH="amd64"
 
-# install packages
+# install build packages
 RUN \
  apk update && \
- apk add --no-cache \
+ apk add --no-cache --virtual=build-dependencies \
  wget \
  unzip && \
  
@@ -21,6 +21,8 @@ RUN \
 	shadow && \
  
 # cleanup
+ apk del --purge \
+	build-dependencies && \
  rm -rf \
 	/tmp/* \
 	/var/tmp/*
