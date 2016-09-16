@@ -1,0 +1,1 @@
+*/15  *  *  *  * s6-setuidgid abc /app/rclone.sh 2>&1

@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv bash
+#!/usr/bin/with-contenv sh
 
 PUID=${PUID:-911}
 PGID=${PGID:-911}
@@ -13,4 +13,7 @@ User uid:    $(id -u abc)
 User gid:    $(id -g abc)
 -------------------------------------
 "
-chown abc:abc /config
+chown abc:abc \
+	/config \
+	/data \
+	/defaults

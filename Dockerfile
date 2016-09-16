@@ -40,15 +40,9 @@ RUN \
 	usermod -G users abc && \
 
 # create some folders
-	mkdir -p /config
+	mkdir -p /config /app /defaults
 
 # add local files
 COPY root/ /
 
-USER abc
-
-ENTRYPOINT ["/usr/bin/rclone"]
-
 VOLUME ["/config"]
-
-CMD ["--version"]

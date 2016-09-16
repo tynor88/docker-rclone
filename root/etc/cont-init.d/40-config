@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv sh
+
+# set crontab
+crontab -u abc /defaults/rclone_cron
+
+# permissions
+chown -R abc:abc \
+	/app
+chmod +x /app/rclone.sh
