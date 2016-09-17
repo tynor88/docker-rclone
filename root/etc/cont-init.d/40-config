@@ -7,3 +7,7 @@ crontab -u abc /defaults/rclone_cron
 chown -R abc:abc \
 	/app
 chmod +x /app/rclone.sh
+
+# run first time
+exec \
+	s6-setuidgid abc /app/rclone.sh
