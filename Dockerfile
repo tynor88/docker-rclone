@@ -43,7 +43,7 @@ RUN \
 	usermod -G users abc && \
 
 # create some folders
-	mkdir -p /config /app /defaults
+	mkdir -p /config /app /defaults /data
 
 # add local files
 COPY root/ /
