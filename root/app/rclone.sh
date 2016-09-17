@@ -1,5 +1,10 @@
 #!/usr/bin/with-contenv sh
 
-echo "Running => rclone sync /config AmazonEncrypted:/"
-rclone sync /config AmazonEncrypted:/
-echo "rclone done!"
+if [ -z "{$REMOTE_SYNC}" ]; then
+ echo "REMOTE_SYNC environment variable was not passed to the container."
+ exit 1
+else
+ echo "Running => rclone sync /config {$REMOTE_SYNC}:/"
+ rclone sync /config ${REMOTE_SYNC}:/
+ echo "rclone done!"
+fi
