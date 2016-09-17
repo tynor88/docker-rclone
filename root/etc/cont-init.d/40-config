@@ -6,6 +6,8 @@ crontab -u abc /defaults/rclone_cron
 # permissions
 chown -R abc:abc \
 	/app
+chown abc:abc \
+	/config/.rclone.conf
 chmod +x /app/rclone.sh
 
 # run first time
