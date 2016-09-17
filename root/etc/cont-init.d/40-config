@@ -8,7 +8,8 @@ chown -R abc:abc \
 	/app
 chown abc:abc \
 	/config/.rclone.conf
-chmod +x /app/rclone.sh
+chmod +x \ 
+	/app/rclone.sh
 
 # run first time
 exec \
