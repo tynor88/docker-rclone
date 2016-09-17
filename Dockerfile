@@ -1,6 +1,9 @@
 FROM justcontainers/base-alpine
 MAINTAINER tynor88 <tynor@hotmail.com>
 
+# s6 environment settings
+ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
+
 # global environment settings
 ENV RCLONE_VERSION="current"
 ENV RCLONE_ARCH="amd64"
