@@ -1,4 +1,4 @@
-FROM quay.io/justcontainers/base-alpine:0.12.1
+FROM quay.io/justcontainers/base-alpine:v0.12.1
 MAINTAINER tynor88 <tynor@hotmail.com>
 
 # s6 environment settings
