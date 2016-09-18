@@ -1,1 +1,1 @@
-*/2 *  *  *  * flock -xn /var/lock/rclone.lck -c /app/rclone.sh 2>&1
+*/2 *  *  *  * /app/rclone.sh 2>&1
