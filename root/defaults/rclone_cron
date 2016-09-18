@@ -1,1 +1,1 @@
-*/1 *  *  *  * /app/rclone.sh
+*/1 *  *  *  * HOME="/config" /app/rclone.sh
