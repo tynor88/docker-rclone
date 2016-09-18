@@ -10,7 +10,9 @@ chown abc:abc \
 	/config/.rclone.conf
 chmod +x \
 	/app/rclone.sh
+chmod 777 \
+	/var/lock
 
-# run first time
+# run on startup
 exec \
 	s6-setuidgid abc /app/rclone.sh
