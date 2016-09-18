@@ -3,6 +3,9 @@
 # set crontab
 crontab -u abc /defaults/rclone_cron
 
+# create empty config file
+touch /config/.rclone.conf
+
 # permissions
 chown -R abc:abc \
 	/app
