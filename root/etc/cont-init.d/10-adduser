@@ -16,4 +16,6 @@ User gid:    $(id -g abc)
 chown abc:abc \
 	/app \
 	/config \
-	/defaults
+	/defaults \
+	/data \
+	/var/lock/rclone.lock

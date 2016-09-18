@@ -42,8 +42,9 @@ RUN \
 	useradd -u 911 -U -d /config -s /bin/false abc && \
 	usermod -G users abc && \
 
-# create some folders
-	mkdir -p /config /app /defaults /data
+# create some files / folders
+	mkdir -p /config /app /defaults /data && \
+	touch /var/lock/rclone.lock
 
 # add local files
 COPY root/ /
