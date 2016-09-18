@@ -43,6 +43,9 @@ RUN \
 	useradd -u 911 -U -d /config -s /bin/false abc && \
 	usermod -G users abc && \
 
+# change homedir for root user
+	usermod -d /config root && \
+
 # create some files / folders
 	mkdir -p /config /app /defaults /data && \
 	touch /var/lock/rclone.lock
