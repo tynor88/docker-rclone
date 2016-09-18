@@ -3,6 +3,7 @@ MAINTAINER tynor88 <tynor@hotmail.com>
 
 # s6 environment settings
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
+ENV S6_KEEP_ENV=1
 
 # global environment settings
 ENV RCLONE_VERSION="current"
