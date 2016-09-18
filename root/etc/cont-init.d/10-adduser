@@ -17,5 +17,4 @@ chown abc:abc \
 	/app \
 	/config \
 	/defaults \
-	/data \
 	/var/lock/rclone.lock
