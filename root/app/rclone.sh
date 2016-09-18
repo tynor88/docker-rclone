@@ -7,7 +7,7 @@
     echo "Error: SYNC_DESTINATION environment variable was not passed to the container."
     exit 1
   else
-    synccmd="rclone --config "/config/.rclone.conf" sync /data $SYNC_DESTINATION:/$SYNC_DESTINATION_SUBPATH"
+    synccmd="rclone sync /data $SYNC_DESTINATION:/$SYNC_DESTINATION_SUBPATH"
     echo "Executing => $synccmd"
     eval "$synccmd"
   fi
