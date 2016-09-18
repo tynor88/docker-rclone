@@ -1,6 +1,8 @@
 #!/usr/bin/with-contenv sh
 
 (
+  flock -xn 200
+  
   if [ -z "$REMOTE_SYNC" ]; then
     echo "Error: REMOTE_SYNC environment variable was not passed to the container."
     exit 1
