@@ -45,10 +45,7 @@ RUN \
 
 # create some files / folders
 	mkdir -p /config /app /defaults /data && \
-	touch /var/lock/rclone.lock && \
-	
-# change home directory for root user
-	usermod -d /config root
+	touch /var/lock/rclone.lock
 
 # add local files
 COPY root/ /
