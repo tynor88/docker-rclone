@@ -1,5 +1,12 @@
 #!/usr/bin/with-contenv sh
 
+# change crontab file
+if [ "$CRON_SCHEDULE" ]; then
+  sed -i -e 's|\*\/1 \* \* \* \*|$CRON_SCHEDULE|g' /defaults/rclone_cron
+fi
+
+echo "crontab => $(cat /defaults/rclone_cron)"
+
 # set crontab
 crontab -u abc /defaults/rclone_cron
 
