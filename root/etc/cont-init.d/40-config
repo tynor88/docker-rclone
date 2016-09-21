@@ -1,7 +1,7 @@
 #!/usr/bin/with-contenv sh
 
 # change crontab file
-if [[ -n $CRON_SCHEDULE ]]; then
+if [[ -n "$CRON_SCHEDULE" ]]; then
   sed -i -e 's|\*\/1 \* \* \* \*|$CRON_SCHEDULE|g' /defaults/rclone_cron
 fi
 
