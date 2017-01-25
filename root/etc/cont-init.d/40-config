@@ -1,0 +1,25 @@
+#!/usr/bin/with-contenv sh
+
+# change crontab file
+if [[ -n "$CRON_SCHEDULE" ]]; then
+  sed -i -e 's|0 \* \* \* \*|'"$CRON_SCHEDULE"'|g' /defaults/rclone_cron
+fi
+
+echo "crontab => $(cat /defaults/rclone_cron)"
+
+# set crontab
+crontab -u abc /defaults/rclone_cron
+
+# create empty config file
+touch /config/.rclone.conf
+
+# permissions
+chown -R abc:abc \
+	/app
+chown abc:abc \
+	/config/.rclone.conf
+chmod +x \
+	/app/rclone.sh \
+	/config/Rclone.sh
+chmod 777 \
+	/var/lock
