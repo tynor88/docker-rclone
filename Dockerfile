@@ -20,14 +20,14 @@ RUN \
  apk add --no-cache --virtual=build-dependencies \
  wget \
  unzip && \
- 
+
  wget -q -P /tmp/ http://downloads.rclone.org/rclone-${RCLONE_VERSION}-linux-${RCLONE_ARCH}.zip && \
  unzip /tmp/rclone-${RCLONE_VERSION}-linux-${RCLONE_ARCH}.zip && \
  mv /tmp/rclone-*-linux-${RCLONE_ARCH}/rclone /usr/bin && \
- 
+
  apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/community \
 	shadow && \
- 
+
 # cleanup
  apk del --purge \
 	build-dependencies && \
