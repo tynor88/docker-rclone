@@ -21,7 +21,7 @@ RUN \
  wget \
  unzip && \
 
- wget -q -P tmp/ http://downloads.rclone.org/rclone-${RCLONE_VERSION}-linux-${RCLONE_ARCH}.zip && \
+ wget -q -O /tmp/rclone-${RCLONE_VERSION}-linux-${RCLONE_ARCH}.zip http://downloads.rclone.org/rclone-${RCLONE_VERSION}-linux-${RCLONE_ARCH}.zip && \
  unzip /tmp/rclone-${RCLONE_VERSION}-linux-${RCLONE_ARCH}.zip && \
  mv /tmp/rclone-*-linux-${RCLONE_ARCH}/rclone /usr/bin && \
 
