@@ -14,7 +14,8 @@ RUN \
  apk update && \
  apk add --no-cache \
  ca-certificates \
- fuse
+ fuse && \
+ sed -i 's/#user_allow_other/user_allow_other/' /etc/fuse.conf
 
 # install build packages
 RUN \
