@@ -19,7 +19,6 @@ chown -R abc:abc \
 chown abc:abc \
 	/config/.rclone.conf
 chmod +x \
-	/app/rclone.sh \
-	/config/Rclone.sh
+	/app/rclone.sh
 chmod 777 \
 	/var/lock
