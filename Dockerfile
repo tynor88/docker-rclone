@@ -13,7 +13,8 @@ ENV RCLONE_ARCH="amd64"
 RUN \
  apk update && \
  apk add --no-cache \
- ca-certificates
+ ca-certificates \
+ fuse
 
 # install build packages
 RUN \
