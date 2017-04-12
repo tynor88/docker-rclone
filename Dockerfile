@@ -51,5 +51,6 @@ RUN \
 # add local files
 COPY root/ /
 
-ENTRYPOINT ["/init"]
 VOLUME ["/config"]
+
+ENTRYPOINT ["/init"]
