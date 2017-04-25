@@ -13,9 +13,7 @@ ENV S6_KEEP_ENV=1
 RUN \
  apk update && \
  apk add --no-cache \
- ca-certificates \
- fuse && \
- sed -i 's/#user_allow_other/user_allow_other/' /etc/fuse.conf
+ ca-certificates
 
 # install build packages
 RUN \
