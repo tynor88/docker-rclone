@@ -1,7 +1,7 @@
 [appurl]: https://rclone.org/
 [microbadger]: https://microbadger.com/images/tynor88/rclone
 [dockerstore]: https://store.docker.com/community/images/tynor88/rclone
-[docker-rclone-mount]: https://store.docker.com/community/images/tynor88/rclone
+[docker-rclone-mount]: https://github.com/tynor88/docker-rclone-mount
 
 # docker-rclone
 [![Docker Layers](https://images.microbadger.com/badges/image/tynor88/rclone.svg)][microbadger]
