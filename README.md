@@ -1,11 +1,16 @@
+[appurl]: https://rclone.org/
+[microbadger]: https://microbadger.com/images/tynor88/rclone
+[dockerstore]: https://store.docker.com/community/images/tynor88/rclone
+[docker-rclone-mount]: https://store.docker.com/community/images/tynor88/rclone
+
 # docker-rclone
-[![Docker Pulls](https://img.shields.io/docker/pulls/tynor88/rclone.svg)][hub]
-[![Docker Stars](https://img.shields.io/docker/stars/tynor88/rclone.svg)][hub]
-[![Docker Build](https://img.shields.io/docker/automated/tynor88/rclone.svg)][hub]
-[![Docker Layers](https://images.microbadger.com/badges/image/tynor88/rclone.svg)][hub]
-[![Docker Version](https://images.microbadger.com/badges/version/tynor88/rclone.svg)][hub]
-[hub]: https://hub.docker.com/r/tynor88/rclone/
-Docker for Rclone - a command line program to sync files and directories to and from various cloud services.
+[![Docker Layers](https://images.microbadger.com/badges/image/tynor88/rclone.svg)][microbadger]
+[![Docker Pulls](https://img.shields.io/docker/pulls/tynor88/rclone.svg)][dockerstore]
+[![Docker Stars](https://img.shields.io/docker/stars/tynor88/rclone.svg)][dockerstore]
+[![Docker Build Status](https://img.shields.io/docker/build/tynor88/rclone.svg)][dockerstore]
+[![Docker Build](https://img.shields.io/docker/automated/tynor88/rclone.svg)][dockerstore]
+
+Docker for [Rclone][appurl] - a command line program to sync files and directories to and from various cloud services.
 
 **Cloud Services**
 * Google Drive
@@ -30,7 +35,7 @@ Docker for Rclone - a command line program to sync files and directories to and 
 * Check mode to check for file hash equality
 * Can sync to and from network, eg two different cloud accounts
 * Optional encryption (Crypt)
-* Optional FUSE mount (rclone mount)
+* Optional FUSE mount (rclone mount) - **See [docker-rclone-mount][docker-rclone-mount]**
 
 ## Usage
 
