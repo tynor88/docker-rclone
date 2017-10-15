@@ -67,5 +67,7 @@ docker create \
 
 ## Versions
 
++ **2017/10/15:**
+  * Update to latest Rclone (v1.38)
 + **2017/01/25:**
   * Initial release
