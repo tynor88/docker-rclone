@@ -1,8 +1,8 @@
+ARG RCLONE_VERSION="current"
 FROM alpine:latest
 MAINTAINER tynor88 <tynor@hotmail.com>
 
 # global environment settings
-ENV RCLONE_VERSION="current"
 ENV PLATFORM_ARCH="amd64"
 
 # s6 environment settings
