@@ -6,5 +6,5 @@ RELEASES=$(curl -qsL https://api.github.com/repos/${RCLONE_REPO}/tags | grep \"n
 IMG=$(basename $DOCKER_REPO)
 for tag in ${RELEASES}; do
     echo "============== Pushing ${IMG}:$tag"
-    docker push ${DOCKER_REPO}:$tag .
+    docker push ${DOCKER_REPO}:$tag
 done
