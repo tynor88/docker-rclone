@@ -8,3 +8,6 @@ for tag in ${RELEASES}; do
     echo "============== Building ${IMG}:$tag"
     docker build --build-arg RCLONE_VERSION=$tag -t ${DOCKER_REPO}:$tag .
 done
+latest=$(echo ${RELEASES}|cut -d" " -f1)
+echo "============== Building ${IMG}:latest"
+docker build --build-arg RCLONE_VERSION=$latest -t ${DOCKER_REPO}:latest .

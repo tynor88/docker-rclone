@@ -8,3 +8,5 @@ for tag in ${RELEASES}; do
     echo "============== Pushing ${IMG}:$tag"
     docker push ${DOCKER_REPO}:$tag
 done
+echo "============== Pushing ${IMG}:latest"
+docker push ${DOCKER_REPO}:latest
