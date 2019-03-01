@@ -1,9 +1,9 @@
-FROM alpine:latest
+FROM arm32v6/alpine:latest
 MAINTAINER tynor88 <tynor@hotmail.com>
 
 # global environment settings
-ENV PLATFORM_ARCH="amd64"
-ARG RCLONE_VERSION="current"
+ENV PLATFORM_ARCH="arm"
+ARG RCLONE_VERSION="1.46"
 
 # s6 environment settings
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
