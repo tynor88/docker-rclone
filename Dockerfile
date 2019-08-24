@@ -33,7 +33,7 @@ RUN \
  wget -q https://downloads.rclone.org/v${RCLONE_VERSION}/rclone-v${RCLONE_VERSION}-linux-${PLATFORM_ARCH}.zip && \
  unzip /tmp/rclone-v${RCLONE_VERSION}-linux-${PLATFORM_ARCH}.zip && \
  mv /tmp/rclone-*-linux-${PLATFORM_ARCH}/rclone /usr/bin && \
- apk add --no-cache --repository http://nl.alpinelinux.org/alpine/edge/community \
+ apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
 	shadow && \
 # cleanup
  apk del --purge \
