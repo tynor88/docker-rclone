@@ -9,6 +9,10 @@ ARG RCLONE_VERSION="current"
 ENV S6_BEHAVIOUR_IF_STAGE2_FAILS=2
 ENV S6_KEEP_ENV=1
 
+# User and Group ID
+ENV PUID=911
+ENV PGID=1000
+
 # install packages
 RUN \
  apk update && \
@@ -45,8 +49,8 @@ RUN \
 
 # create abc user
 RUN \
-	groupmod -g 1000 users && \
-	useradd -u 911 -U -d /config -s /bin/false abc && \
+	groupmod -g ${PGID} users && \
+	useradd -u ${PUID} -U -d /config -s /bin/false abc && \
 	usermod -G users abc && \
 # create some files / folders
 	mkdir -p /config /app /defaults /data && \
