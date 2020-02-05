@@ -11,7 +11,7 @@ ENV S6_KEEP_ENV=1
 
 # User and Group ID
 ENV PUID=911
-ENV GUID=1000
+ENV PGID=1000
 
 # install packages
 RUN \
@@ -49,7 +49,7 @@ RUN \
 
 # create abc user
 RUN \
-	groupmod -g ${GUID} users && \
+	groupmod -g ${PGID} users && \
 	useradd -u ${PUID} -U -d /config -s /bin/false abc && \
 	usermod -G users abc && \
 # create some files / folders
