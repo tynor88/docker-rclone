@@ -57,7 +57,8 @@ docker create \
 * `-e SYNC_DESTINATION_SUBPATH` If the data should be backed up to a subpath on the destionation (will automaticly be created if it does not exist)
 * `-e CRON_SCHEDULE` A custom cron schedule which will override the default value of: 0 * * * * (hourly)
 * `-e SYNC_COMMAND` A custom rclone command which will override the default value of: rclone sync /data $SYNC_DESTINATION:/$SYNC_DESTINATION_SUBPATH
-
+* `-e PUID` User id
+* `-e PGID` Group id
 
 ## Info
 
