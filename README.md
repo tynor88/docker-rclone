@@ -13,29 +13,112 @@
 Docker for [Rclone][appurl] - a command line program to sync files and directories to and from various cloud services.
 
 **Cloud Services**
-* Google Drive
+* 1Fichier
+* Akamai Netstorage
+* Alibaba Cloud (Aliyun) Object Storage System (OSS)
 * Amazon S3
-* Openstack Swift / Rackspace cloud files / Memset Memstore
-* Dropbox
-* Google Cloud Storage
-* Amazon Drive
-* Microsoft One Drive
-* Hubic
 * Backblaze B2
+* Box
+* Ceph
+* China Mobile Ecloud Elastic Object Storage (EOS)
+* Arvan Cloud Object Storage (AOS)
+* Citrix ShareFile
+* Cloudflare R2
+* Cloudinary
+* DigitalOcean Spaces
+* Digi Storage
+* Dreamhost
+* Dropbox
+* Enterprise File Fabric
+* Fastmail Files
+* Files.com
+* FTP
+* Gofile
+* Google Cloud Storage
+* Google Drive
+* Google Photos
+* HDFS
+* Hetzner Storage Box
+* HiDrive
+* HTTP
+* iCloud Drive
+* ImageKit
+* Internet Archive
+* Jottacloud
+* IBM COS S3
+* IDrive e2
+* IONOS Cloud
+* Koofr
+* Leviia Object Storage
+* Liara Object Storage
+* Linkbox
+* Linode Object Storage
+* Magalu
+* Mail.ru Cloud
+* Memset Memstore
+* Mega
+* Memory
+* Microsoft Azure Blob Storage
+* Microsoft Azure Files Storage
+* Microsoft OneDrive
+* Minio
+* Nextcloud
+* OVH
+* Blomp Cloud Storage
+* OpenDrive
+* OpenStack Swift
+* Oracle Cloud Storage Swift
+* Oracle Object Storage
+* Outscale
+* ownCloud
+* pCloud
+* Petabox
+* PikPak
+* Pixeldrain
+* premiumize.me
+* put.io
+* Proton Drive
+* QingStor
+* Qiniu Cloud Object Storage (Kodo)
+* Quatrix by Maytech
+* Rackspace Cloud Files
+* rsync.net
+* Scaleway
+* Seafile
+* Seagate Lyve Cloud
+* SeaweedFS
+* Selectel
+* SFTP
+* Sia
+* SMB / CIFS
+* StackPath
+* Storj
+* Synology
+* SugarSync
+* Tencent Cloud Object Storage (COS)
+* Uloz.to
+* Uptobox
+* Wasabi
+* WebDAV
 * Yandex Disk
+* Zoho WorkDrive
 * The local filesystem
 
 **Features**
-
-* MD5/SHA1 hashes checked at all times for file integrity
-* Timestamps preserved on files
-* Partial syncs supported on a whole file basis
-* Copy mode to just copy new/changed files
-* Sync (one way) mode to make a directory identical
-* Check mode to check for file hash equality
-* Can sync to and from network, eg two different cloud accounts
-* Optional encryption (Crypt)
-* Optional FUSE mount (rclone mount) - **See [docker-rclone-mount][docker-rclone-mount]**
+* Transfers
+  * MD5, SHA1 hashes are checked at all times for file integrity
+  * Timestamps are preserved on files
+  * Operations can be restarted at any time
+  * Can be to and from network, e.g. two different cloud providers
+  * Can use multi-threaded downloads to local disk
+* Copy new or changed files to cloud storage
+* Sync (one way) to make a directory identical
+* Bisync (two way) to keep two directories in sync bidirectionally
+* Move files to cloud storage deleting the local after verification
+* Check hashes and for missing/extra files
+* Mount your cloud storage as a network disk
+* Serve local or remote files over HTTP/WebDav/FTP/SFTP/DLNA
+* Experimental Web based GUI
 
 ## Usage
 
@@ -67,6 +150,8 @@ docker create \
 
 ## Versions
 
++ **2024/01/12:**
+  * Updated to latest Rclone(v1.38) and s6-overlay(v3.2.0.2)
 + **2017/10/15:**
   * Update to latest Rclone (v1.38)
 + **2017/01/25:**
